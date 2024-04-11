@@ -8,7 +8,7 @@ const Recipes = () => {
   const [recipe, setRecipe] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const[search,setSearch] = useState("chicken");
+  const [search, setSearch] = useState("chicken"); // Default search term
 
   const handleSearch = (event) => {
     setSearch(event.target.value);
@@ -16,6 +16,7 @@ const Recipes = () => {
 
   useEffect(() => {
     let timeoutId;
+
     const fetchdata = async () => {
       setLoading(true);
       try {
@@ -24,17 +25,20 @@ const Recipes = () => {
         );
         const json = await response.json();
         setRecipe(json.meals);
-        console.log(json);
         setLoading(false);
       } catch (error) {
         setError("Unable to fetch data!!!");
       }
     };
-    timeoutId = setTimeout(fetchdata, 2000); 
-  
-    
+
+    // Clear previous timeout before setting a new one
+    clearTimeout(timeoutId);
+    // Set a timeout to delay API call and prevent too frequent requests
+    timeoutId = setTimeout(fetchdata, 1000);
+
+    return () => clearTimeout(timeoutId); // Cleanup function to clear timeout
+
   }, [search]);
- 
 
   if (error) return <div className="error">{error}</div>;
   if (loading)
@@ -52,19 +56,18 @@ const Recipes = () => {
 
   return (
     <main>
-    <Search handleSearch={handleSearch}/>
-    <div className="recipecard-api">
-      {recipe?.length > 0 ? (             //To display a "Not Found" message when the searched data is not available,
-        recipe.map((recipe) => (
-          <Recipecard key={recipe.idMeal} recipe={recipe} />
-        ))
-      ) : (
-        <div className="not-found">No results found</div>
-      )}
-    </div>
-    <Footer/>
-  </main>
-     
+      <Search handleSearch={handleSearch} />
+      <div className="recipecard-api">
+        {recipe?.length > 0 ? (
+          recipe.map((recipe) => (
+            <Recipecard key={recipe.idMeal} recipe={recipe} />
+          ))
+        ) : (
+          <div className="not-found">No results found</div>
+        )}
+      </div>
+      <Footer />
+    </main>
   );
 };
 

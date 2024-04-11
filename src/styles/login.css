@@ -1,0 +1,52 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust to fit your design */
+   align-self: center;
+  }
+  
+  .center-box-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set the height of the container to full viewport height */
+  }
+  
+  .center-box {
+    border: 2px solid slateblue;
+    padding: 20px;
+    border-radius: 10px;
+    /* Adjust background color as needed */
+    width: 300px; /* Set the width to your desired size */
+    max-width: 80%; /* Set a maximum width if needed */
+    text-align: center; /* Center the content horizontally */
+  }
+  
+  
+  button {
+    background-color: slateblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    background-color: #6a5acd; /* Darker shade of slateblue */
+  }
+  
+
+  .label{
+    text-align: left !important;
+    padding-top: 5px;
+  }
+  .b{
+    text-align: left !important;
+margin-top: 5px;
+  }
+  h2{
+    color: #6a5acd;
+  }

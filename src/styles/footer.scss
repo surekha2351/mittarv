@@ -1,6 +1,6 @@
 .footer-section{
-  background-color: black;
-  color: white;
+  background-color: slateblue;
+  color: white !important;
   display: flex;
   flex-wrap: wrap; 
   padding: 20px;
@@ -9,6 +9,7 @@
 .footer-content1{
   display: grid;
   gap: 20px;
+  
   p {
     max-width: 30rem;
   }
@@ -34,4 +35,16 @@
   .footer-section{
     width: 33rem;
   }
+}
+.iconss{
+  color: white;
+
+}
+.iconss:hover{
+  color: black;
+  font-size: 20px;
+}
+.log{
+  margin-left: 3px;
+  color: white;
 }

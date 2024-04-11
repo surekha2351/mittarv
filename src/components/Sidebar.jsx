@@ -14,7 +14,7 @@ const Sidebar = ({links,onClose}) => {
       {links.map((link) => (
         <Link to={link.path} href="#" className='sidebar-links' key={link.name}>{link.icon}{link.name}</Link>
       ))}
-         <ImCancelCircle onClick={onClose} className='cancel-icon' />
+         <ImCancelCircle onClick={onClose} className='cancel-icon' /> <h1>Ghjios</h1>
     </div>
    </main>
   )
