@@ -65,13 +65,13 @@
         display: none;
         
     }
-    @media(0<width<1025px){
+    @media(0<width<768px){
         .sidebar-btn{
             display: block;
             cursor: pointer;
             padding-left:10px;
             position: absolute;
-            left: 80%;
+            left: 95%;
         }
         .links a{
             display: none;
@@ -83,7 +83,7 @@
         .logo{
             // margin:0 -90px;
             position: absolute;
-            right:68%;  
+            right:60%;  
             color: white;
     }
 }

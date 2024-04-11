@@ -1,6 +1,6 @@
 import React from "react";
 import Hero2  from './Hero2';
-import Quote from "./Quote";
+
 
 const Hero = () => {
   return (
@@ -32,7 +32,6 @@ const Hero = () => {
         </div>
       </div>
       <Hero2/>
-      <Quote/>
     </main>
   );
 };

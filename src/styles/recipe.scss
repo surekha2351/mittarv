@@ -73,4 +73,9 @@
   background-color: var(--background-color);
   animation: getAnimationDuration(1s) popout;
   }
-
+@media(0<width<500px){
+  .recipe-container{
+    width: 30rem;
+    margin-left: 6rem;
+  }
+}
