@@ -6,7 +6,8 @@ const Footer = () => {
   return (
     <main>
       <div className="footer-section">
-        <div className="footer-content">
+        
+        <div className="footer-content1">
           <h3>Recipehub.com</h3>
           <p>
             RecipeHub is a place where you can please your soul and tummy with
@@ -18,7 +19,8 @@ const Footer = () => {
             <FaCopyright />
             2024|Recipehub.com|All Rights Reserved</p>
         </div>
-        <div className="footer-content">
+  
+        <div className="footer-content2">
           <h3>Contact Us</h3>
          <div className="p-coll">
           <p>Recipehub@gmail.com</p>
@@ -26,7 +28,9 @@ const Footer = () => {
           <p>Kumbeshwar-11,Patan</p>
          </div>
         </div>
-        <div className="footer-content">
+
+
+        <div className="footer-content3">
           <h3>Socials</h3>
           <div className="p-coll">
           <p>Facebook</p>
@@ -34,6 +38,8 @@ const Footer = () => {
           <p>Instagram</p>
           </div>
         </div>
+
+
       </div>
     </main>
   );

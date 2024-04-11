@@ -7,7 +7,7 @@ const Hero = () => {
     <main>
       <div className="body-section">
         <div className="text-content">
-          <h1>What Are We About</h1>
+          <h1>What Are We About?</h1>
           <p>
             RecipeHub is a place where you can please your soul and tummy with
             delicious food recipes of all cuisines. All-in-one culinary
